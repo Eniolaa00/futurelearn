@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <title>Future Learn</title>
+    </head>
+<body>
+    <header>
+        <div class="flex items-center">
+        <div class="p-4">
+        <img src="./fl-logo.svg" alt="" width="115" height="40">
+        </div>
+        <ul class="flex">
+           <label for="drop1">
+            <li  onclick="refreshPage(1)" class="px-5 py-[30px] mb-[-1px] cursor-pointer group flex items-center text-[#de00a5] bod">
+                <span class="text-[1rem] leading-[1.5] text-[#de00a5] font-bold bod1 group-hover:text-[#2541fc]">Subjects</span>
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" width="30" height="30"  id="subjectSvg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" style="width: 24px;height: 24px;"><path  class="group-hover:text-[#2541fc]" fill="currentColor" d="M128 182a5.8 5.8 0 0 1-4.2-1.8l-80-80a5.9 5.9 0 0 1 8.4-8.4l75.8 75.7l75.8-75.7a5.9 5.9 0 0 1 8.4 8.4l-80 80a5.8 5.8 0 0 1-4.2 1.8Z"/></svg></li>
+            </label>
+            <label for="drop2">
+            <li onclick="refreshPage(2)" class="px-5 py-[30px] mb-[-1px] cursor-pointer group flex items-center text-[#de00a5] bod">
+                <span class="text-[1rem] leading-[1.5] text-[#de00a5] font-bold bod1 group-hover:text-[#2541fc]  courses">Courses</span>
+                    <svg id="coursesSvg"  xmlns="http://www.w3.org/2000/svg" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256" style="width: 24px;height: 24px;"><path  class="group-hover:text-[#2541fc]" fill="currentColor" d="M128 182a5.8 5.8 0 0 1-4.2-1.8l-80-80a5.9 5.9 0 0 1 8.4-8.4l75.8 75.7l75.8-75.7a5.9 5.9 0 0 1 8.4 8.4l-80 80a5.8 5.8 0 0 1-4.2 1.8Z"/></svg></li>
+                </label>
+            <li class="px-5 py-[30px] mb-[-1px] cursor-pointer flex items-center"><span class="text-[1rem] leading-[1.5] text-[#de00a5] font-bold bod1">FutureLearn for business</span></li>
+        </ul>
+        </div>
+        <div class="flex absolute py-[1.2rem] top-[0%] px-[1rem] right-[0%] items-center">
+        <div class="flex relative hide">
+            <form action="search">
+                <input type="search" placeholder="Search online courses" class="bg-[#fff] placeholder:text-[#3a343a] placeholder:text-[0.8rem]w-full border-[1px] border-solid border-[#cacacc] w-full py-2 pl-2 pr-16 for outline-offset-[0.8px]">
+            </form>
+            <div class="bg-[#de00a5] absolute right-[0%] h-full flex items-center bod2">
+                <button class="py-[0.25em] px-[0.5em] "><iconify-icon icon="bytesize:search" style="color: white;" width="20" height="20"></iconify-icon></button>
+            </div>
+        </div>
+        
+        <div class="ml-[0.75rem]">
+            <a href=""><span class="text-[#de00a5] text-[14px] leading-[1.5] py-[0.5em] px-[1em] font-bold bod1">Sign in</span></a>
+        </div>
+        <div class="bg-[#de00a5] broder-[#de00a5] border-[1px] border-solid h-[2.625rem] items-center justify-center flex ml-[0.75rem] px-[0.5em] bod2">
+            <a href="">
+                <span class="text-[#fff] font-bold">Register</span>
+            </a>
+        </div>
+        </div>
+    </header>
+    <main class="">
+        <div>
+        <input type="checkbox" id="drop1" class="peer sr-only" name="sub">
+        <section class="hidden peer-checked:block w-full bg-[#fafafa] border-b-[#ededee] border-b-[1px] border-solid border-t-[1px] py-[1.5rem] px-4">
+            <div class="w-full flex">
+                
+            <div class="w-[35.5%]">
+                <h5 class="leading-[2.5] text-[1rem] font-bold flex items-center pl-4">Subjects</h5>
+                <ul class="mb-4">
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Business & Management
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]">Creative Arts & Media
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Healthcare & Medicine
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> History
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> IT & Computer Science
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]">Language
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Law
+                            </span>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Literature
+                            </span>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Nature & Enviroment
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Politics & Society
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Pscychology & Mental Health
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Science,Engineering & Maths
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Study Skills
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    <li class="pl-4 group  text-[#4a4d55] mr-[0.5rem]">
+                        <a href="" class="flex items-center justify-between">
+                           <span class="text-[#4a4d55] text-[16px] leading-[2.25] text-[#4a4d55] light bod1 group-hover:text-[#2541fc] font-[520]"> Teaching
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path class="group-hover:text-[#2541fc]"fill="currentColor" d="M96 216a8.5 8.5 0 0 1-5.7-2.3a8.1 8.1 0 0 1 0-11.4l74.4-74.3l-74.4-74.3a8.1 8.1 0 0 1 11.4-11.4l80 80a8.1 8.1 0 0 1 0 11.4l-80 80A8.5 8.5 0 0 1 96 216Z"/></svg>
+                           </a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+            <div class="flex ml-[1.5rem] basis-0 grow">
+                <div>
+                <h5 class="font-bold text-[16px] leading-[2.5]">Featured</h5>
+                <div class="grid grid-rows-2 grid-cols-2 " style="row-gap: 1.5rem;">
+                <div class="flex flex-col bg-[#fff] backs w-[90%]">
+                    <div>
+                        <a href="">
+                            <div><img src="./--1.webp" alt="" class="img1" style="width:370px; height: 150px;"></div>
+                        </a>
+                    </div>
+                    <div class="p-[0.75rem] flex flex-col grow cursor-pointer">
+                        <span class="text-[#727376] text-[14px] leading-[21px]">Short Course</span>
+                        <span class="font-bold text-[1rem] leading-[1.25] mt-[0.5rem] mb-[0.5rem] ">Communication and Interpersonal Skills at Work</span>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-[#fff] backs w-[90%]">
+                    <div>
+                        <a href="">
+                            <div><img src="./--2.jpg" alt="" class="img1" style="width:370px; height: 150px;"></div>
+                        </a>
+                    </div>
+                    <div class="p-[0.75rem] flex flex-col grow cursor-pointer">
+                        <span class="text-[#727376] text-[14px] leading-[21px]">Short Course</span>
+                        <span class="font-bold text-[1rem] leading-[1.25] mt-[0.5rem] mb-[0.5rem] ">Airway Matters</span>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-[#fff] backs w-[90%]">
+                    <div>
+                        <a href="">
+                            <div><img src="./--3.webp" alt="" class="img1" style="width:370px; height: 150px;" ></div>
+                        </a>
+                    </div>
+                    <div class="p-[0.75rem] flex flex-col grow cursor-pointer">
+                        <span class="text-[#727376] text-[14px] leading-[21px]">Short Course</span>
+                        <span class="font-bold text-[1rem] leading-[1.25] mt-[0.5rem] mb-[0.5rem] ">User Management in Salesforce</span>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-[#fff] backs w-[90%]">
+                    <div>
+                        <a href="">
+                            <div><img src="./--4.webp" alt="" class="img1" style="width:370px; height: 150px;"></div>
+                        </a>
+                    </div>
+                    <div class="p-[0.75rem] flex flex-col grow cursor-pointer">
+                        <span class="text-[#727376] text-[14px] leading-[21px]">Short Course</span>
+                        <span class="font-bold text-[1rem] leading-[1.25] mt-[0.5rem] mb-[0.5rem] ">Behaviour Change Interventions:Introductory Principles and Practice</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+            </div>
+        </section>
+        </div>
+        <div>
+        <input type="checkbox" id="drop2" class="peer sr-only">
+        <section class="hidden peer-checked:block w-full bg-[#fafafa] border-b-[#ededee] border-b-[1px] border-solid border-t-[1px] py-[1.5rem] px-">
+            <ul class="my-[1.5rem] flex">
+                <li class="border-[1px] border-solid border-[#ededee] basis-[30%] mr-[0.75rem] text-[1rem] leading-[1.5] cursor-pointer p-4">
+                    <div class="flex">
+                        <div class="mr-[0.5rem]"><img src="./of1.png" alt=""></div>
+                        <div class="text-[1rem] font-bold text-[#3a343a] bod1">Short courses</div>
+                    </div>
+                    <div  class="mt-[0.25rem]">
+                        <span class="text-[1rem] leading-[1.5]">
+                            Learn new skills with a flexible online course
+                        </span>
+                    </div>
+                </li>
+                <li class="border-[1px] border-solid border-[#ededee] basis-[30%] mr-[0.75rem] text-[1rem] leading-[1.5] cursor-pointer p-4">
+                    <div class="flex items-center">
+                        <div class="mr-[0.5rem]"><img src="./of2.png" alt=""></div>
+                        <div class="text-[1rem] font-bold text-[#3a343a] bod1">ExpertTracks</div>
+                    </div>
+                    <div  class="mt-[0.25rem]">
+                        <span class="text-[1rem] leading-[1.5]">
+                           Upskill with a series of specialist courses
+                        </span>
+                    </div>
+                </li>
+                <li class="border-[1px] border-solid border-[#ededee] basis-[30%] mr-[0.75rem] text-[1rem] leading-[1.5] cursor-pointer p-4">
+                    <div class="flex items-center">
+                        <div class="mr-[0.5rem]"><img src="./of3.png" alt=""></div>
+                        <div class="text-[1rem] font-bold text-[#3a343a] bod1">Microdentials</div>
+                    </div>
+                    <div  class="mt-[0.25rem]">
+                        <span class="text-[1rem] leading-[1.5]">
+                            Earn professional or academic accreditation
+                        </span>
+                    </div>
+                </li>
+                <li class="border-[1px] border-solid border-[#ededee] basis-[30%] mr-[0.75rem] text-[1rem] leading-[1.5] cursor-pointer p-4">
+                    <div class="flex items-center">
+                        <div class="mr-[0.5rem]"><img src="./of4.png" alt=""></div>
+                        <div class="text-[1rem] font-bold text-[#3a343a] bod1">Online degrees</div>
+                    </div>
+                    <div  class="mt-[0.25rem]">
+                        <span class="text-[1rem] leading-[1.5]">
+                            Study Flexibly online as you build to a degree
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <section>
+        <div class="w-full bg-[#030138] p-[1px] mt-1">
+            <div class="bgimg left-[0%] w-full pt-[3rem] pb-[8rem] flex items-end px-[6.5rem] gap-16"> 
+                <div><img src="./future.svg" alt=""></div>
+                <div>
+                    <div>
+                        <span class="text-[20px] leading-[1.5] text-[#fff] font-normal">Learn new skills with world-class universities and experts</span>
+                    </div>
+                    <div class="my-[1rem]">
+                        <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 but">Start learning now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-[-5%]">
+            <div class="back2 ">
+                <div class="flex flex-col items-center">
+        <div>
+            <ul class="flex mb-[0.75rem]">
+                <li class="bg-[#00a5a6] flex a1 w-[13.75rem]"><img src="./cipd.svg" alt="" style="height: 42px;"></li>
+                <li class="bg-[#fff] flex a1 w-[6rem]"><img src="./rasppi.svg" alt="" style="height: 75px;"></li>
+                <li class="bg-[#e12726] flex a1 w-[13.75rem]"><img src="./kings.svg" alt="" style="height: 75px;"></li>
+                <li class="bg-[#fafafa] flex a1  w-[6rem]"><img src="./deakin.svg" alt="" style="height: 70px;"></li>
+                <li class="bg-[#f5bd00] flex a1 items-end w-[13.75rem]"><img src="./ucl.svg" alt="" style="height: 50px; margin-left: 15px;"></li>
+                <li class="bg-[#fff] flex a1 items-center w-[13.75rem]"><img src="./glasgow.svg" alt="" style="height: 50px;"></li>
+                <li class="bg-[#002e5f] flex a1  w-[6rem]"><img src="./open.svg" alt="" style="height: 50px;"></li>
+                <li class="bg-[#fff] flex a1 items-center cursor-pointer w-[13.75rem]"><img src="./monash.svg" alt="" style="height: 40px;"></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="flex mb-[0.75rem]">
+                <li class="bg-[#fff] flex a1 w-[13.75rem]"><img src="./nhs.svg" alt="" style="height: 42px;"></li>
+                <li class="bg-[#a100ff] flex a1 w-[13.75rem]"><img src="./ugc.svg" alt="" style="height: 42px;"></li>
+                <li class="bg-[#fafafa] flex a1 w-[13.75rem]"><img src="./institut.svg" alt="" style="height: 60px;"></li>
+                <li class="bg-[#004f32] flex a1 w-[13.75rem]"><img src="./ins2.svg" alt="" style="height: 50px;"></li>
+                <li class="bg-[#015fbc] flex a1 w-[13.75rem]"><img src="./conventary.svg" alt="" style="height: 50px;"></li>
+            </ul>
+        </div>
+        </div>
+        <div class="px-[6.5rem] pt-[9.1625rem]">
+            <div class="flex gap-[8.5rem] pb-[6.875rem]">
+                <div>
+        <div class="flex flex-col">
+            <div><span class="text-[2rem] leading-[1.25] text-[#030138] font-normal">FutureLearn</span><span class="text-[40px] leading-[1.25]font-bold">Unlimited</span> </div>
+            <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+        </div>
+        <div>
+        <div class="my-[1.5rem]">
+            <span class="text-[20px] leading=[1.5] text-[#030138] font-bold">Subscribe now for limitless learning, whenever and wherever suits you.</span>
+        </div>
+        <div>
+            <span class="text-[16px] text-[#030138] leading-[1.5]">Earn CV-ready certificates, learn at your own pace and get long-term access to thousands of high-quality short courses.</span>
+        </div>
+        <div class="my-[1.5rem] border-[#de00a5] border-solid border-[1px] h-[42px] flex items-center justify-center w-[7.1875rem] cursor-pointer div1 text-[#de00a5] text-[16px]">
+            <span class=" leading-[1.5]  font-bold ">Learn more</span>
+
+        </div>
+    </div>
+    </div>
+
+        
+        <div class="py-10 px-[60px] max-w-[40%] bg-[#030138] flex flex-col items-center mr-[4.625rem] rounded-[5px] nowrap">
+            <div class="mb-4">
+                <span class="text-[#fff] font-bold text-[25px] leading-[1.5]">Unlimited Monthly</span>
+            </div>
+            <ul class="mb-5">
+                <li class="flex items-center"><div class="mr-2.5 mt-[3px]"><iconify-icon icon="akar-icons:check" style="color: #fecb51;" width="20" height="20"></iconify-icon></div><span class="text-[#fff] text-[16px] leading-[1.5]">Limitless short courses*</span></li>
+                <li class="flex items-center"><div class="mr-2.5 mt-[3px]"><iconify-icon icon="akar-icons:check" style="color: #fecb51;" width="20" height="20"></iconify-icon></div><span class="text-[#fff] text-[16px] leading-[1.5]">Gain CV-boosting certificates</span></li>
+                <li class="flex items-center"><div class="mr-2.5 mt-[3px]"><iconify-icon icon="akar-icons:check" style="color: #fecb51;" width="20" height="20"></iconify-icon></div><span class="text-[#fff] text-[16px] leading-[1.5]">Cancel anytime</span></li>
+            </ul>
+            <div class="mb-5 flex">
+                <span class="text-[16px] leading-[1.5] text-[#fff]">$27.99/month</span>
+            </div>
+            <div class="my-[1rem] flex mb-5">
+                <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 but">Subscribe to Unlimited</span>
+            </div>
+            <div class="">
+                <span class="text-[#fff] text-[14px] leading-[1.5]">*Some short courses are exempt. Does not include Microcredentials or ExpertTracks.</span>
+            </div>
+        </div>
+        </div>
+       
+        </div>
+        </div> 
+        </div>
+        <div class="bg-[#030138] p-[1px]">
+            <div class="px-4">
+                <div class="flex gap-[5rem] px-[4.75rem] py-[3.75rem] shrinky">
+                    <div class="shrink-0 flex items-center">
+                        <img src="./ankaraman.webp" alt="" class="max-w-[648px] w-full h-[311px] cursor-pointer">
+                    </div>
+                    <div class="shrinks">
+                    <div class="flex flex-col justify-start">
+                        <div>
+                            <span class="text-[40px] leading-[1.25] text-[#fff]">Want to be the future of the fashion industry?</span>
+                        </div>
+                        <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+        
+                    </div>
+                    <div class="my-[1.8755rem]"><span class="text-[20px] text-[#fff] leading-[1.5]">From textile design to trend forecasting, our fashion courses by Bloomsbury will get you closer to your dream job. Next stop, fashion week!</span></div>
+                    <div class="flex items-center">
+                        <div class="p-[0.46875rem] mt-[-0.75rem]">
+                            <span class="text-[16px] leading-[1.5] text-[#fff]">In partnership with</span>
+                        </div>
+                        <div class="p-[0.9375rem]">
+                            <img src="./man.svg" alt="" class="max-w-[200px] h-[42px] w-[auto]">
+                        </div>
+                    </div>
+                    <div class="my-[1rem]">
+                        <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 but">Join now</span>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+
+        </div>
+        <div class="backg">
+            <div class="pt-[8.75rem]">
+                <div class="max-w-[480px] mx-[5.625rem]">
+                    <div class="flex flex-col">
+                <div><span class="font-normal text-[40px] leading-[1.25rem] text-[#030138]">Short courses:</span><span class="font-bold text-[36px] leading-[50px] text-[#030138]">bite-sized, flexible learning</span></div>
+                <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                </div>
+                <div class="my-[1.875rem]">
+                    <span class="text-[16px] leading-[1.5] text-[#030138] font-medium">Upskill, reskill or pursue a passion with short courses across every subject, whether you're a beginner or already an expert.</span>
+                </div>
+                <div class="my-[1.875rem]">
+                    <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">View all short courses</span>
+                </div>
+                </div>
+                
+            </div>
+            <div class="backg2">
+                <div class="px-[6.5rem] mt-[2.5rem]">
+                <ul class="flex wrap">
+                    <li class="mb-[30px] mr-[1.75rem] box bg-[#fafafa] backchange cursor-pointer w-[16.875rem]">
+                        <div class="background"></div><img src="./--1.webp" alt="" class="img1" style="width:270px; height: 150px;">
+                    <div class="p-[0.9375rem] flex flex-col">
+                        <div>
+                        <span class="text-[14px] leading-[1.5] text-[#393b42]">University of Leeds & Institue of Coding</span>
+                        </div>
+                        <div class="mb-[9.8px] mt-[7px]">
+                            <span class="text-[20px] font-bold leading-[25px] text-[3a343a]">Communication and Interersonal Skills at Work</span>
+                        </div>
+                        <div class="mt-[2.4374rem] flex">
+                            <div class="p-[0.46875rem] flex items-center ">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="et:hourglass" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[3px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">2 weeks</span>
+                                </div>
+
+                            </div>
+                            <div class="p-[0.46875rem] flex items-center">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="iconoir:wristwatch" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[2px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">2 hrs per week</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mt-[20px]">
+                                <div class="bg-[#cacacc]  w-[80%]">
+                                <span class="text-[#3a343a] text-[14px] leading-[1.5] px-[5px] pt-[2] pb-[1px] font-bold">Business & Management</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </li>
+                    <li class="mb-[30px] mr-[1.75rem] box bg-[#fafafa] backchange cursor-pointer w-[16.875rem]">
+                        <div class="background"></div><img src="./--2.jpg" alt="" class="img1" style="width:270px; height: 150px;">
+                        <div class="p-[0.9375rem] flex flex-col">
+                            <div>
+                            <span class="text-[14px] leading-[1.5] text-[#393b42]">UCL (University College London) , University College London Hospitals &amp; Air Ambulance Charity Kent Surrey Sussex (KSS)</span>
+                            </div>
+                            <div class="mb-[9.8px] mt-[7px]">
+                                <span class="text-[20px] font-bold leading-[25px] text-[3a343a]">Airway Matters</span>
+                            </div>
+                            <div class="mt-[2.4374rem] flex mt-[3rem]">
+                                <div class="p-[0.46875rem] flex items-center ">
+                                    <div class="p-[0.15625rem]"><iconify-icon icon="et:hourglass" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                    <div class="p-[0.15625rem] -translate-y-[3px]">
+                                        <span class="text-[14px] leading-[1.5] text-[#4a4d55]">6 weeks</span>
+                                    </div>
+    
+                                </div>
+                                <div class="p-[0.46875rem] flex items-center">
+                                    <div class="p-[0.15625rem]"><iconify-icon icon="iconoir:wristwatch" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                    <div class="p-[0.15625rem] -translate-y-[2px]">
+                                        <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 hrs per week</span>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mt-[20px]">
+                                    <div class="bg-[#cacacc]  w-[80%]">
+                                    <span class="text-[#3a343a] text-[14px] leading-[1.5] px-[5px] pt-[2] pb-[1px] font-bold">Healthcare & Medicine</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </li>
+                    <li class="mb-[30px] mr-[1.75rem] box bg-[#fafafa] backchange cursor-pointer w-[16.875rem]">
+                        <div class="background"></div><img src="./--3.webp" alt="" class="img1" style="width:270px; height: 150px;">
+                    <div class="p-[0.9375rem]">
+                        <div>
+                        <span class="text-[14px] leading-[1.5] text-[#393b42]">NextWork</span>
+                        </div>
+                        <div class="mb-[9.8px] mt-[7px]">
+                            <span class="text-[20px] font-bold leading-[25px] text-[3a343a]">User Management in Salesforce</span>
+                        </div>
+                        <div class="mt-[2.4374rem] flex mt-[6.5rem]">
+                            <div class="p-[0.46875rem] flex items-center ">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="et:hourglass" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[3px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 weeks</span>
+                                </div>
+
+                            </div>
+                            <div class="p-[0.46875rem] flex items-center">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="iconoir:wristwatch" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[2px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">3 hrs per week</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mt-[20px]">
+                                <div class="bg-[#cacacc]  w-[80%]">
+                                <span class="text-[#3a343a] text-[14px] leading-[1.5] px-[5px] pt-[2] pb-[1px] font-bold">IT & Computer Science</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </li>
+                    <li class="mb-[30px] mr-[1.75rem] box bg-[#fafafa] backchange cursor-pointer w-[16.875rem]">
+                        <div class="background"></div><img src="./--4.webp" alt="" class="img1" style="width:270px; height: 150px;">
+                    <div class="p-[0.9375rem]">
+                        <div>
+                        <span class="text-[14px] leading-[1.5] text-[#393b42]"> UCL (University College of London)</span>
+                        </div>
+                        <div class="mb-[9.8px] mt-[7px]">
+                            <span class="text-[20px] font-bold leading-[25px] text-[3a343a]">Behaviour Change Interventions: Introductory Principles and Practice</span>
+                        </div>
+                        <div class="mt-[2.4374rem] flex mt-[3.1rem]">
+                            <div class="p-[0.46875rem] flex items-center ">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="et:hourglass" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[3px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 weeks</span>
+                                </div>
+
+                            </div>
+                            <div class="p-[0.46875rem] flex items-center">
+                                <div class="p-[0.15625rem]"><iconify-icon icon="iconoir:wristwatch" style="color: #4a4d55;" width="16" height="16"></iconify-icon></div>
+                                <div class="p-[0.15625rem] -translate-y-[2px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">3 hrs per week</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mt-[20px]">
+                                <div class="bg-[#cacacc]  w-[90%]">
+                                <span class="text-[#3a343a] text-[14px] leading-[1.5] px-[5px] pt-[2] pb-[1px]">Pscychology & Mental Health</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="backg1">
+            <div class="px-[5.625rem] ml-[50%]">
+                <div class="max-w-[480px]">
+                <div class="flex flex-col"><span class="text-[40px] font-normal">ExpertTracks: become an</span><span class="text-[36px] font-bold leading-[50px]"> expert in your industry</span></div>
+                <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                <div class="my-[1.875rem]">
+                    <span>Master new skills and specialise with these series of in-depth courses.</span>
+                </div>
+                <div class="mt-[1.875rem]">
+                    <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">View all ExpertTracks</span>
+                </div>
+             </div>
+            </div>
+            <div class="px-[5.6625rem] mt-[2.5rem]">
+                <div class="">
+                    <ul class="flex gap-[1.25rem] pb-[4.8125rem] wrap">
+                        <li class="bg-[#fff] box basis-[33.3%] cursor-pointer backchange">
+                            <div class="relative">
+                            <div class="background2"></div>
+                            <img src="./brit.jpg" alt="" style="height: 150px;width:100%;object-fit: cover;object-position: 50% 50%;">
+        
+                                <div class="min-w-[130px] max-w-[calc(100%-2rem)] rounded-[5px] bg-[#fff] absolute top-[1.25rem] right-[1.25rem] z-20"><img src="./british.svg" alt="" class="p-[5px]">
+                            </div>
+                            </div>
+                            <div class="p-[0.9375rem]">
+                            <div>
+                                <span class="text-[#727376] text-[16px] text-[1.5]">British Council</span>
+                            </div>
+                            <div class="mt-[0.4375rem] mb-[0.6125rem]">
+                                <span class="text-[20px] font-bold leading-[1.25] text-[#3a343a]">Understanding IELTS</span>
+                            </div>
+                            <div class="pt-[0.875rem] mt-[2.2rem] flex">
+                                <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa"  width="16" height="16" viewBox="0 0 32 32" aria-hidden="false"><path d="M28 8V4h-4V0H0v24h4v4h4v4h24V8zM2 2h20v20H2zm28 28H10v-2h18V17h-2v9H6v-2h18V6h2v6h2v-2h2z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 courses</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" viewBox="0 0 32 32" width="16" height="16" aria-hidden="false"><path d="M26 6V0H6v6h2v5.68l5 2v4.64l-5 2V26H6v6h20v-6h-2v-5.68l-5-2v-4.64l5-2V10h-2v.33l-5 2v7.36l5 2V26H10v-4.32l5-2v-7.36l-5-2V6zm-2 24H8v-2h16zM8 2h16v2H8z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">12 weeks</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    width="16" height="16"  class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" aria-hidden="false"><path d="M16.1 23.2L4 16.4l3.5-2.2 8.5 5 7.2-4.2.4-.2.9-.5 2-1.1L32 9.9 16.1 0 .1 9.9l5.4 3.2-5.4 3.4 4.8 2.7-4.8 2.7 15.9 10 15.9-10-4.8-2.7 4.8-2.7-2-1.2M4 9.9l12.1-7.5 12 7.5-3.5 2-1.9 1.1-6.7 3.9L9.4 13l-1.9-1.1-3.5-2zM28.1 22l-12 7.5L4 21.9l2.9-1.6 9.1 5.2 9.2-5.2 2.9 1.7z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">Introductory</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div>                            <div class="bg-[#cacacc] mt-[1.25rem] w-[22%]">
+                                <span class="text-[14px] font-bold text-[#3a343a] leading-[1.5] pb-[1px] px-[5px] pt-[2px] ">Language</span>
+                            </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="bg-[#fff] box basis-[33.3%] cursor-pointer backchange">
+                            <div class="relative">
+                            <div class="background3"></div>
+                            <img src="./brit2.jpg" alt="" style="height: 150px;width:100%;object-fit: cover;object-position: 50% 50%;">
+                            <div class="max-w-[calc(100%-2rem)] rounded-[5px] bg-[#fff] absolute top-[1.25rem] right-[1.25rem] z-20"><img src="./british2.svg" alt="" class="p-[5px]" style="height: 40px; width: 56px;">
+                            </div>
+                            <div class="p-[0.9375rem]">
+                            <div>
+                                <span class="text-[#727376] text-[16px] text-[1.5]">Insttitut Francais de la Mode (IFM)</span>
+                            </div>
+                            <div class="mt-[0.4375rem] mb-[0.6125rem]">
+                                <span class="text-[20px] font-bold leading-[1.25] text-[#3a343a]">Fashion Management: Create Your Sustainable Brand</span>
+                            </div>
+                            <div class="pt-[0.875rem] flex">
+                                <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa"  width="16" height="16" viewBox="0 0 32 32" aria-hidden="false"><path d="M28 8V4h-4V0H0v24h4v4h4v4h24V8zM2 2h20v20H2zm28 28H10v-2h18V17h-2v9H6v-2h18V6h2v6h2v-2h2z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 courses</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" viewBox="0 0 32 32" width="16" height="16" aria-hidden="false"><path d="M26 6V0H6v6h2v5.68l5 2v4.64l-5 2V26H6v6h20v-6h-2v-5.68l-5-2v-4.64l5-2V10h-2v.33l-5 2v7.36l5 2V26H10v-4.32l5-2v-7.36l-5-2V6zm-2 24H8v-2h16zM8 2h16v2H8z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">11 weeks</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    width="16" height="16"  class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" aria-hidden="false"><path d="M16.1 23.2L4 16.4l3.5-2.2 8.5 5 7.2-4.2.4-.2.9-.5 2-1.1L32 9.9 16.1 0 .1 9.9l5.4 3.2-5.4 3.4 4.8 2.7-4.8 2.7 15.9 10 15.9-10-4.8-2.7 4.8-2.7-2-1.2M4 9.9l12.1-7.5 12 7.5-3.5 2-1.9 1.1-6.7 3.9L9.4 13l-1.9-1.1-3.5-2zM28.1 22l-12 7.5L4 21.9l2.9-1.6 9.1 5.2 9.2-5.2 2.9 1.7z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">Introductory</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div>                            <div class="bg-[#cacacc] mt-[1.25rem] w-[51%]">
+                                <span class="text-[14px] font-bold text-[#3a343a] leading-[1.5] pb-[1px] px-[5px] pt-[2px] ">Business & Management</span>
+                            </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="bg-[#fff] box basis-[33.3%] cursor-pointer backchange">
+                            <div class="relative">
+                            <div class="background2"></div>
+                            <img src="./brit3.webp" alt="" style="height: 150px;width:100%;object-fit: cover;object-position: 50% 50%;">
+                            <div class="min-w-[130px] max-w-[calc(100%-2rem)] rounded-[5px] bg-[#fff] absolute top-[1.25rem] right-[1.25rem] z-20"><img src="./british3.svg" alt="" class="p-[5px]">
+                            </div>
+                            </div>
+                            <div class="p-[0.9375rem]">
+                            <div>
+                                <span class="text-[#727376] text-[16px] text-[1.5]">Conventry University</span>
+                            </div>
+                            <div class="mt-[0.4375rem] mb-[0.6125rem]">
+                                <span class="text-[20px] font-bold leading-[1.25] text-[#3a343a]">Project Management and its Role in Effective Business</span>
+                            </div>
+                            <div class="pt-[0.875rem] flex">
+                                <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa"  width="16" height="16" viewBox="0 0 32 32" aria-hidden="false"><path d="M28 8V4h-4V0H0v24h4v4h4v4h24V8zM2 2h20v20H2zm28 28H10v-2h18V17h-2v9H6v-2h18V6h2v6h2v-2h2z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">5 courses</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" viewBox="0 0 32 32" width="16" height="16" aria-hidden="false"><path d="M26 6V0H6v6h2v5.68l5 2v4.64l-5 2V26H6v6h20v-6h-2v-5.68l-5-2v-4.64l5-2V10h-2v.33l-5 2v7.36l5 2V26H10v-4.32l5-2v-7.36l-5-2V6zm-2 24H8v-2h16zM8 2h16v2H8z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">10 weeks</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-[7.5px]">
+                                <div class="p-[2.5px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                    width="16" height="16"  class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" aria-hidden="false"><path d="M16.1 23.2L4 16.4l3.5-2.2 8.5 5 7.2-4.2.4-.2.9-.5 2-1.1L32 9.9 16.1 0 .1 9.9l5.4 3.2-5.4 3.4 4.8 2.7-4.8 2.7 15.9 10 15.9-10-4.8-2.7 4.8-2.7-2-1.2M4 9.9l12.1-7.5 12 7.5-3.5 2-1.9 1.1-6.7 3.9L9.4 13l-1.9-1.1-3.5-2zM28.1 22l-12 7.5L4 21.9l2.9-1.6 9.1 5.2 9.2-5.2 2.9 1.7z"></path></svg>
+                                </div>
+                                <div class="p-[2.5px]">
+                                    <span class="text-[14px] leading-[1.5] text-[#4a4d55]">Intermediate</span>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div>                            <div class="bg-[#cacacc] mt-[1.25rem] w-[51%]">
+                                <span class="text-[14px] font-bold text-[#3a343a] leading-[1.5] pb-[1px] px-[5px] pt-[2px] ">Business & Management</span>
+                            </div>
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            </div>
+            <div class="backg3">
+                <div class="px-[6.5rem] pt-[7.5rem]">
+                <div class="max-w-[480px]">
+                <div><span class="text-[40px] leading-[1.25] font-normal text-[#030138]"> Microcredentials:</span><span class="font-bold text-[36px] leading-[50px] text-[#030138]">build in-demand career skills</span></div>
+                <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                </div>
+                <div class="my-[1.875rem]">
+                    <span class="text-[16px] leading-[1.5] text-[#030138]">Gain a professional or academic qualification to boost your CV.</span>
+                </div>
+                <div class="my-[1.875rem]">
+                    <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">View all Microdentials</span>
+                </div>
+                </div>
+                <div class="px-[6.5rem] mb-[5.625rem]">
+                    <ul class="flex gap-x-4">
+                        <li class="group bg-[#fff] box w-[50%]">
+                            <div class="relative">
+                                <div class="background2"></div>
+                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                    <img src="./11.jpg" class="w-[100%]  group-hover:scale-[1.01] transition duration-[400ms] linear" alt="Louvre" style="height: 150px; object-fit: cover;object-position: 50% 42%;"/>
+                    <div class="max-w-[calc(100%-2rem)] rounded-[5px] bg-[#fff] absolute top-[1.25rem] right-[1.25rem] z-20"><img src="./british2.svg" alt="" class="p-[5px]" style="height: 40px; width: 56px;">
+                </div>
+                </div>
+            </div>
+                    <div class="p-[0.9375rem] group-hover:bg-[#ededee]">
+                        <div>
+                            <span class="text-[#727376] text-[16px] text-[1.5]">Institut Francais de la Mode (IFM)</span>
+                        </div>
+                        <div class="mt-[0.4375rem] mb-[0.6125rem]">
+                            <span class="text-[20px] font-bold leading-[1.25] text-[#3a343a]">Fashion Business</span>
+                        </div>
+                        <div class="pt-[0.875rem] flex">
+                            <div class="flex items-center m-[7.5px]">
+                            <div class="p-[2.5px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa"  width="16" height="16" viewBox="0 0 32 32" aria-hidden="false"><path d="M28 8V4h-4V0H0v24h4v4h4v4h24V8zM2 2h20v20H2zm28 28H10v-2h18V17h-2v9H6v-2h18V6h2v6h2v-2h2z"></path></svg>
+                            </div>
+                            <div class="p-[2.5px]">
+                                <span class="text-[14px] leading-[1.5] text-[#4a4d55]">4 courses</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center m-[7.5px]">
+                            <div class="p-[2.5px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" viewBox="0 0 32 32" width="16" height="16" aria-hidden="false"><path d="M26 6V0H6v6h2v5.68l5 2v4.64l-5 2V26H6v6h20v-6h-2v-5.68l-5-2v-4.64l5-2V10h-2v.33l-5 2v7.36l5 2V26H10v-4.32l5-2v-7.36l-5-2V6zm-2 24H8v-2h16zM8 2h16v2H8z"></path></svg>
+                            </div>
+                            <div class="p-[2.5px]">
+                                <span class="text-[14px] leading-[1.5] text-[#4a4d55]">11 weeks</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center m-[7.5px]">
+                            <div class="p-[2.5px]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                width="16" height="16"  class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" aria-hidden="false"><path d="M16.1 23.2L4 16.4l3.5-2.2 8.5 5 7.2-4.2.4-.2.9-.5 2-1.1L32 9.9 16.1 0 .1 9.9l5.4 3.2-5.4 3.4 4.8 2.7-4.8 2.7 15.9 10 15.9-10-4.8-2.7 4.8-2.7-2-1.2M4 9.9l12.1-7.5 12 7.5-3.5 2-1.9 1.1-6.7 3.9L9.4 13l-1.9-1.1-3.5-2zM28.1 22l-12 7.5L4 21.9l2.9-1.6 9.1 5.2 9.2-5.2 2.9 1.7z"></path></svg>
+                            </div>
+                            <div class="p-[2.5px]">
+                                <span class="text-[14px] leading-[1.5] text-[#4a4d55]">Undergraduate</span>
+                            </div>
+                        </div>
+
+                        </div>
+                        <div>                            <div class="bg-[#cacacc] mt-[1.25rem] w-[38%]">
+                            <span class="text-[14px] font-bold text-[#3a343a] leading-[1.5] pb-[1px] px-[5px] pt-[2px] ">Business & Management</span>
+                        </div>
+                        </div>
+                        </div>
+                    </li>
+                    <li class="group w-[6/12] bg-[#fff] box"  style="width: 50%;">
+                        <div class="relative">
+                            <div class="background2"></div>
+             <div class="relative overflow-hidden bg-no-repeat bg-cover">
+                <img src="./12.jpg" class="w-[100%]  group-hover:scale-[1.01] transition duration-[400ms] linear" alt="Louvre" style="height: 150px; object-fit: cover;object-position: 50% 42%;"/>
+                <div class="max-w-[calc(100%-2rem)] rounded-[5px] bg-[#fff] absolute top-[1.25rem] right-[1.25rem] z-20"><img src="./openb.svg" alt="" class="p-[5px]" style="height: 40px; width: 56px;">
+            </div>
+            </div>
+        </div>
+                <div class="p-[0.9375rem] group-hover:bg-[#ededee]">
+                    <div>
+                        <span class="text-[#727376] text-[16px] text-[1.5]">The Open University</span>
+                    </div>
+                    <div class="mt-[0.4375rem] mb-[0.6125rem]">
+                        <span class="text-[20px] font-bold leading-[1.25] text-[#3a343a]">Mentoring and Coaching in Professional Learning</span>
+                    </div>
+                    <div class="pt-[0.875rem] flex">
+                        <div class="flex items-center m-[7.5px]">
+                        <div class="p-[2.5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa"  width="16" height="16" viewBox="0 0 32 32" aria-hidden="false"><path d="M28 8V4h-4V0H0v24h4v4h4v4h24V8zM2 2h20v20H2zm28 28H10v-2h18V17h-2v9H6v-2h18V6h2v6h2v-2h2z"></path></svg>
+                        </div>
+                        <div class="p-[2.5px]">
+                            <span class="text-[14px] leading-[1.5] text-[#4a4d55]">1 course</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center m-[7.5px]">
+                        <div class="p-[2.5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" viewBox="0 0 32 32" width="16" height="16" aria-hidden="false"><path d="M26 6V0H6v6h2v5.68l5 2v4.64l-5 2V26H6v6h20v-6h-2v-5.68l-5-2v-4.64l5-2V10h-2v.33l-5 2v7.36l5 2V26H10v-4.32l5-2v-7.36l-5-2V6zm-2 24H8v-2h16zM8 2h16v2H8z"></path></svg>
+                        </div>
+                        <div class="p-[2.5px]">
+                            <span class="text-[14px] leading-[1.5] text-[#4a4d55]">12 weeks</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center m-[7.5px]">
+                        <div class="p-[2.5px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            width="16" height="16"  class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizesmall__17-dg Icon-module_cool-grey__3Wtpa" aria-hidden="false"><path d="M16.1 23.2L4 16.4l3.5-2.2 8.5 5 7.2-4.2.4-.2.9-.5 2-1.1L32 9.9 16.1 0 .1 9.9l5.4 3.2-5.4 3.4 4.8 2.7-4.8 2.7 15.9 10 15.9-10-4.8-2.7 4.8-2.7-2-1.2M4 9.9l12.1-7.5 12 7.5-3.5 2-1.9 1.1-6.7 3.9L9.4 13l-1.9-1.1-3.5-2zM28.1 22l-12 7.5L4 21.9l2.9-1.6 9.1 5.2 9.2-5.2 2.9 1.7z"></path></svg>
+                        </div>
+                        <div class="p-[2.5px]">
+                            <span class="text-[14px] leading-[1.5] text-[#4a4d55]">Postgraduate</span>
+                        </div>
+                    </div>
+
+                    </div>
+                    <div>                            <div class="bg-[#cacacc] mt-[1.25rem] w-[13%]">
+                        <span class="text-[14px] font-bold text-[#3a343a] leading-[1.5] pb-[1px] px-[5px] pt-[2px] ">Teaching</span>
+                    </div>
+                    </div>
+                    </div>
+                </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-[#030138] py-[3.75rem]">
+                <div class="flex flex-col items-center">
+                <div>
+                    <span class="text-[40px] leading-[1.25] text-[#fff]">How does it work?</span>
+                </div>
+                <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+            </div>
+            <div class="py-[2.5rem]">
+                <ul class="p-[0.9375rem] flex justify-center">
+                    <li class="mr-[1.25rem]">
+                        <div class="py-[0.625rem] px-[0.3125rem] border-b-[2px] border-solid border-[#fff]"><span class="text-[16px] text-[#fff] leading-[1.5]">Short courses</span></div>
+                    </li>
+                    <li class="mr-[1.25rem] backy">
+                        <div class="py-[0.625rem] px-[0.3125rem]"><span class="text-[16px] text-[#fff] leading-[1,5]">ExpertTracks</span></div>
+                    </li>
+                    <li class="mr-[1.25rem] backy">
+                        <div class="py-[0.625rem] px-[0.3125rem]"><span class="text-[16px] text-[#fff] leading-[1,5]">Microcredentials</span></div>
+                    </li>
+                    <li class="mr-[1.25rem] backy">
+                        <div class="py-[0.625rem] px-[0.3125rem]"><span class="text-[16px] text-[#fff] leading-[1,5]">Online Degrees</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-[0.625rem] mx-[5.6625rem]">
+                <ul class="flex gap-[30px]">
+                    <li class="basis-[25%]">
+                        <div><span class="text-[30px] leading-[1.25] text-[#fff]">1</span></div>
+                        <div class="my-[0.625rem] h-[5rem] flex"><span class="text-[20px] font-bold leading-[1.5] text-[#fff]">Choose a short course</span></div>
+                        <div class="my-[0.625rem]"><span class="text-[16px] text-[#fff] leading-[1.5]">From introductory to advanced, you'll find high-quality courses across every subject, designed and taught by academic and industry experts.</span></div>
+                    </li>
+                    <li class="basis-[25%]">
+                        <div><span class="text-[30px] leading-[1.25] text-[#fff]">2</span></div>
+                        <div class="my-[0.625rem] h-[5rem] flex"><span class="text-[20px] font-bold leading-[1.5] text-[#fff]">Subscribe or upgrade</span></div>
+                        <div><span class="text-[16px] text-[#fff] leading-[1.5]">Join FutureLearn Unlimited for long-term access to your course and a CV-ready certificate, or upgrade individually on each course.</span></div>
+                    </li>
+                    <li class="basis-[25%]">
+                        <div><span class="text-[30px] leading-[1.25] text-[#fff]">3</span></div>
+                        <div class="my-[0.625rem] h-[5rem] flex"><span class="text-[20px] font-bold leading-[1.5] text-[#fff]">Learn, connect and discuss</span></div>
+                        <div><span class="text-[16px] text-[#fff] leading-[1.5]">Courses are divided into weeks and steps. You'll be able to connect with other learners throughout your learning journey.</span></div>
+                    </li>
+                    <li class="basis-[25%]">
+                        <div><span class="text-[30px] leading-[1.25] text-[#fff]">4</span></div>
+                        <div class="my-[0.625rem] h-[5rem] flex"><span class="text-[20px] font-bold leading-[1.5] text-[#fff]">
+                            Find your next course</span></div>
+                        <div><span class="text-[16px] text-[#fff] leading-[1.5]">Now you've caught the bug, what will you learn next?</span></div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="background4">
+                <div class="mx-[5.6625rem]">
+                    <div class="flex pt-[3.75rem] justify-between mb-[15px]">
+                    <div class="">
+                        <div>
+                    <div class=""><span class="font-normal text-[60px] leading-[1.25] text-[#030138]">Why FutureLearn?</span></div>
+                    <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px]">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn together</span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">We're all about social learning. Chat with others on your course, learn from each other, and develop your skills in a global classroom of millions.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-[30px] justify-end mb-[15px]">
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px]">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img2.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn anything </span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">From healthcare and history to coding and languages, FutureLearn has a course for you, from beginner to expert.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px] h-full">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img3.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn Flexibly</span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">100% online courses mean you can learn wherever, whenever suits you.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-y-[15px] gap-x-[30px] justify-end wrap">
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px]">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img4.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn with results</span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">Boost your CV with an Unlimited subscription to our bite-sized short courses, or take your learning further with our ExpertTracks and fully accredited microcredentials.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px] h-full">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img5.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn from the best</span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">Designed and facilitated by international teaching experts, the quality of our courses is what sets us apart.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#fff] boxy w-[20.625rem] rounded-[5px] h-full">
+                            <div class="p-[1.25rem]">
+                            <div><img src="./img6.svg" alt=""></div>
+                            <div class="my-[0.625rem]"><span class="text-[20px] leading-[1.5] text-[#3a343a]">Learn with top institutions</span></div>
+                            
+                            <div class="my-[0.625rem]">
+                                <span class="text-[16px] leading-[1.5] text-[#3a343a]">Our courses come from over 260 world-class universities and organisations from around the globe.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="background5">
+                <div class="mx-[5.6625rem] pt-[6.25rem] pb-[3.9rem]">
+                    <div class="max-w-[480px]">
+                        <div>
+                            <div><span class="text-[40px] leading-[1.25] font-normal text-[#030138]"> Don't just take</span><span class="font-bold text-[36px] leading-[50px] text-[#030138]"> our words for it...</span></div>
+                    <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                </div>
+                    <div class="my-[1.875rem]">
+                        <div><span class="font-bold text-[30px] leading-[1.25] text-[#3a343a]">4.6 average rating</span></div>
+                    </div>
+                    <div>
+                        <ul class="p-[0.3125rem] flex items-center">
+                            <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                            <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                            <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                            <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                            <li><iconify-icon icon="clarity:half-star-solid" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                            <li class="p-[0.3125rem]"><span class="text-[16px] leading-[1.5] text-[#3a343a] font-medium">163,939 learner reviews</span></li>
+                        </ul>
+                    </div>
+                    <div class="my-[1.875rem]">
+                        <div class="flex"><span class="text-[16px] leading-[1.5] text-[#3a343a]">Powered by</span><span class="p-[0.3125rem]"><img src="./yotpo.svg" alt="" class="h-[14px]"></span></div>
+                    </div>
+                    <div class="my-[1.875rem]">
+                        <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">View all reviews</span>
+                    </div>
+                    </div>
+                    <div class="flex gap-x-[20px]">
+                        <div class="basis-[25%]">
+                            <div class="bg-[#030138] p-[0.9375rem] rounded-[5px]">
+                                <ul class="flex">
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                </ul>
+                                <div class="my-[1.875rem]">
+                                    <div>
+                                        <span class="leading-[1.5] text-[16px] text-[#fff]">This course went beyond my expectations. High quality content with brilliant professionals and learners to share experiences.</span>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                   <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Ke Z.</span></div>
+                                    <div class="p-[0.46875rem]"><iconify-icon icon="akar-icons:check" style="color: white;" width="14" height="14"></iconify-icon></div>
+                                    <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Verified learner</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-[25%]">
+                            <div class="bg-[#030138] p-[0.9375rem] rounded-[5px]">
+                                <ul class="flex">
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                </ul>
+                                <div class="my-[1.875rem]">
+                                    <div>
+                                        <span class="leading-[1.5] text-[16px] text-[#fff]">The course was clearly organized with good videos, good readings and book references. The teachers are academic researchers with experience in the field and also...</span>
+                                    </div>
+                                    <div class=""><span class="text-[#fff]">Read more</span></div>
+                                </div>
+                                <div class="flex">
+                                   <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Pedro C.</span></div>
+                                    <div class="p-[0.46875rem]"><iconify-icon icon="akar-icons:check" style="color: white;" width="14" height="14"></iconify-icon></div>
+                                    <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Verified learner</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-[25%]">
+                            <div class="bg-[#030138] p-[0.9375rem] rounded-[5px]">
+                                <ul class="flex">
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                </ul>
+                                <div class="my-[1.875rem]">
+                                    <div>
+                                        <span class="leading-[1.5] text-[16px] text-[#fff]">Level was challenging yet manageable, great quality content, adaptable length, and good flexibility. The community was also very friendly and helpful. I am so happy I chose...</span>
+                                    </div>
+                                    <div class=""><span class="text-[#fff]">Read more</span></div>
+                                </div>
+                                <div class="flex">
+                                   <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Tala Y.</span></div>
+                                    <div class="p-[0.46875rem]"><iconify-icon icon="akar-icons:check" style="color: white;" width="14" height="14"></iconify-icon></div>
+                                    <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Verified learner</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basis-[25%]">
+                            <div class="bg-[#030138] p-[0.9375rem] rounded-[5px]">
+                                <ul class="flex">
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                    <li><iconify-icon icon="codicon:star-full" style="color: #fecb51;" width="20" height="20"></iconify-icon></li>
+                                </ul>
+                                <div class="my-[1.875rem]">
+                                    <div>
+                                        <span class="leading-[1.5] text-[16px] text-[#fff]">What a great course - so informative and pitched at just the right level. Really inspired me and I loved all the participant contributions.</span>
+                                    </div>
+                                    <div class=""><span class="text-[#fff]">Read more</span></div>
+                                </div>
+                                <div class="flex">
+                                   <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Carlo S.</span></div>
+                                    <div class="p-[0.46875rem]"><iconify-icon icon="akar-icons:check" style="color: white;" width="14" height="14"></iconify-icon></div>
+                                    <div class="p-[0.46875rem]"><span class="text-[14px] leading-[1.5] text-[#fff] font-bold">Verified learner</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#030138]">
+                <div class="py-[3.75rem]">
+                    <div class="text-center">
+                <div><span class="text-[#fff] leading-[1.25] text-[40px]">Explore top subjects</span></div>
+                <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]" style="margin-inline: auto;"></div>
+            </div>
+            <ul class="mx-[5.625rem] mt-[2.5rem] flex gap-[1.875rem]">
+                <li class="bg-[#fff] basis-[33.3%] shrink p-[1.25rem] rounded-[5px] group  cursor-pointer">
+                    <div class="text-[#de00a5]">
+                        <div class="mb-[0.3125rem]"><span class="text-[#de00a5] text-[20px] leading-[1.5] font-bold group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear">Business & Management</span></div>
+                        <div><span class="text-[#3a343a] text-[16px] leading-[1.5]">Further your career with an online communication, leadership, or business management course.</span></div>
+                        <div class="flex justify-end mt-[0.9375rem]"><svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizemedium__1Rx0M" viewBox="0 0 32 32" aria-hidden="false" style="width: 20px;"><path class="group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear" fill="currentColor" d="M10.35 29.47l-1.41-1.42 12.02-12.02L8.94 4.01l1.41-1.41 13.44 13.43-13.44 13.44z"></path></svg></div>
+                    </div>
+                </li>
+                <li class="bg-[#fff] basis-[33.3%] shrink p-[1.25rem] rounded-[5px] group cursor-pointer">
+                    <div class=" text-[#de00a5]">
+                        <div class="mb-[0.3125rem]"><span class="text-[#de00a5] text-[20px] leading-[1.5] font-bold group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear">Healthcare& Medicine</span></div>
+                        <div><span class="text-[#3a343a] text-[16px] leading-[1.5]">Get vital skills and training in everything from Parkinson's disease to nutrition, with our online healthcare courses.</span></div>
+                        <div class="flex justify-end mt-[0.9375rem]"><svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizemedium__1Rx0M" viewBox="0 0 32 32" aria-hidden="false" style="width: 20px;"><path class="group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear" fill="currentColor" d="M10.35 29.47l-1.41-1.42 12.02-12.02L8.94 4.01l1.41-1.41 13.44 13.43-13.44 13.44z"></path></svg></div>
+                    </div>
+                </li>
+                <li class="bg-[#fff] basis-[33.3%] shrink p-[1.25rem] rounded-[5px] group cursor-pointer">
+                    <div class="text-[#de00a5]">
+                        <div class="mb-[0.3125rem]"><span class="text-[#de00a5] text-[20px] leading-[1.5] font-bold group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear">Teaching</span></div>
+                        <div><span class="text-[#3a343a] text-[16px] leading-[1.5]">Support your professional development and learn new teaching skills and approaches.</span></div>
+                        <div class="flex justify-end mt-[2.3rem]"><svg xmlns="http://www.w3.org/2000/svg" class="Icon-module_icon__23Vv4 Icon-module_sBreakpointSizemedium__1Rx0M" viewBox="0 0 32 32" aria-hidden="false" style="width: 20px;"><path class="group-hover:text-[#030138] transition-[color] duration-[500ms] ease linear" fill="currentColor" d="M10.35 29.47l-1.41-1.42 12.02-12.02L8.94 4.01l1.41-1.41 13.44 13.43-13.44 13.44z"></path></svg></div>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="mt-[2.5rem]">
+            <div class="my-[1.875rem] text-center">
+                <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">View all subjects</span>
+            </div>
+        </div>
+            </div>
+
+            </div>
+            <section>
+                <div class="mx-[5.6625rem] pt-[6.25rem]">
+                    <div class="max-w-[480px]">
+                        <div>
+                            <div><span class="text-[40px] leading-[1.25] font-normal text-[#030138]">The latest </span><span class="font-bold text-[36px] leading-[50px] text-[#030138]"> news and views</span><span class="text-[40px] leading-[1.25] font-normal text-[#030138]"> from the world of learning</span></div>
+                    <div class="bg-[#de00a5] mt-[1rem] h-[7px] w-[70px]"></div>
+                </div>
+                <div class="my-[1.875rem]"><span class="text-[#030138] text-[16px] leading-[1.5] font-medium">Ideas, insights, inspiration and opinion from our expert educators.</span></div>
+                <div class="my-[1.875rem]">
+                    <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">Read more stories</span>
+                </div>
+                </div>
+                </div>
+            </section>
+            <section>
+                <div class="mx-[5.6625rem]">
+                <ul class="flex gap-[1.875rem] mt-[1] mb-[3.75rem] wrap">
+                    <li class="relative basis-[20%] cursor-pointer">
+                    <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs rounded-[5px]">
+                        <img src="./man1.png" class="max-w-xs hover:scale-[1.01] transition duration-[400ms] ease-in-out object-cover h-[310px] w-[16.875rem]" alt="Louvre" />
+                      </div>
+                      <div class="absolute cursor-pointer w-[88%] top-[65%] left-[8%]">
+                        <span class="text-[20px] leading-[1.5] py-1 px-[6px] text-[#3a343a]  boxy2 bg-[#fff]">Top 10 online courses to perfect your English grammar skills</span>
+                      </div>
+                    </li>
+                    <li class="relative basis-[20%] cursor-pointer">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs rounded-[5px]">
+                            <img src="./man2.png" class="max-w-xs hover:scale-[1.01] transition duration-[400ms] ease-in-out object-cover h-[310px]  w-[16.875rem]" alt="Louvre" />
+                          </div>
+                          <div class="absolute cursor-pointer w-[88%] top-[65%] left-[8%]">
+                            <span class="text-[20px] leading-[1.5] py-1 px-[6px] text-[#3a343a]  boxy2 bg-[#fff]">Crime & punishment: Five forensic science courses for armchair detectives</span>
+                          </div>
+                    </li>
+                    <li class="relative basis-[20%] cursor-pointer">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs rounded-[5px]">
+                            <img src="./man3.png" class="max-w-xs hover:scale-[1.01] transition duration-[400ms] ease-in-out object-cover h-[310px]  w-[16.875rem]" alt="Louvre" />
+                          </div>
+                          <div class="absolute cursor-pointer w-[88%] top-[75%] left-[8%]">
+                            <span class="text-[20px] leading-[1.5] py-1 px-[6px] text-[#3a343a]  boxy2 bg-[#fff]">How to get a job in journalism</span>
+                          </div>
+                    </li>
+                    <li class="relative basis-[20%] cursor-pointer">
+                        <div class="relative overflow-hidden bg-no-repeat bg-cover max-w-xs rounded-[5px]">
+                            <img src="./man4.jpg" class="max-w-xs hover:scale-[1.01] transition duration-[400ms] ease-in-out object-cover h-[310px]  w-[16.875rem]" alt="Louvre" />
+                          </div>
+                          <div class="absolute cursor-pointer w-[80%] top-[65%] left-[8%]">
+                            <span class="text-[20px] leading-[1.5] py-1 px-[6px] text-[#3a343a]  boxy2 bg-[#fff]">What is the skill gap and what can I do about it?</span>
+                          </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <hr style="margin-left: 45px;">
+            </section>
+            <section class="mx-[5.6625rem]">
+                <ul class="mt-[1.875rem] flex gap-[1.875rem] mb-[2.5rem] wrap">
+                    <li class="cursor-pointer w-[25%]">
+                        <div><span class="text-[20px] leading-[1.5] text-[#de00a5] font-bold bod1 flex justify-center p-[0.9375rem]">Subjects</span></div>
+                        <div><span class="text-[1rem] leading-[1.5]">Courses grouped by subject</span></div>
+                    </li>
+                    <li class="cursor-pointer ">
+                        <div><span class="text-[20px] leading-[1.5] text-[#de00a5] font-bold bod1 flex justify-center  p-[0.9375rem]">Short courses</span></div>
+                        <div><span class="text-[1rem] leading-[1.5]">Learn new skills with a flexible online course</span></div>
+                    </li>
+                    <li class="cursor-pointer w-[25%]">
+                        <div><span class="text-[20px] leading-[1.5] text-[#de00a5] font-bold bod1 flex justify-center  p-[0.9375rem] mr-6">ExpertTracks</span></div>
+                        <div><span class="text-[1rem] leading-[1.5]">Upskill with a series of specialist courses</span></div>
+                    </li>
+                    <li class="cursor-pointer ">
+                        <div><span class="text-[20px] leading-[1.5] text-[#de00a5] font-bold bod1 flex justify-center  p-[0.9375rem]">Microcredentials</span></div>
+                        <div><span class="text-[1rem] leading-[1.5]">Earn professional or academic accreditation</span></div>
+                    </li>
+                    <li class="cursor-pointer ">
+                        <div><span class="text-[20px] leading-[1.5] text-[#de00a5] font-bold bod1 flex justify-center  p-[0.9375rem] mr-10">Online degrees</span></div>
+                        <div><span class="text-[1rem] leading-[1.5]">Study flexibly online as you build to a degree</span></div>
+                    </li>
+                    
+                </ul>
+            </section>
+            <section class="bg-[#ededee]">
+                <div class="p-[2.5rem] flex justify-between">
+                    <div>
+                    <div><span class="italic font-bold text-[25px] leading-[1.5]">Join</span><span class="text-[20px] leading-[1.5] font-normal"> FutureLearn </span><span class="italic font-bold text-[25px] leading-[1.5]">today</span></div>
+                    </div>
+                    <div>
+                    <div>
+                        <div><span class="text-[#3a343a]  text-[16px] leading-[1.5]">Register for a FutureLearn account to get personalised course recommendations and offers straight to your inbox.</span></div>
+                    </div>
+                    <div class="my-[1.875rem]">
+                        <span class="text-[1rem] leading-[1.5] font-bold text-[#fff] cursor-pointer bg-[#de00a5] border-[1px] border-solid border-[#fff] py-2 px-3.5 bod2">Sign up now</span>
+                    </div>
+                </div>
+                </div>
+            </section>
+        
+        </div>
+    </section>
+    <footer>
+        <section class=" bg-[#4a4d55]">
+            <div class="p-[2.5rem] flex justify-between">
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">About FutureLearn</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Our Values</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Our Partners</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Become a Partner</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Work at FutureLearn</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Press</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Blog</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">Using FutureLearn</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Using our platform</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">FutureLearn Reviews</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Learning guide</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Certificates</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Unlimited</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Microredentials</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">ExpertTracks</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">Need some help?</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">FAQs</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Child safety</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Help center</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Contact</span>
+                    </li>
+                </ul>
+
+            </div>
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">About FutureLearn</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Business and Management</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Healthcare and Medicine</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Teaching</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Psychology and Mental Health</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">IT and Computer Science</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Featured courses</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">Developing Skills</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">FutureLearn for Business</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">FutureLearn Schools</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Course collections</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Career advice</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div><span class="text-[#fff] text-[16px] leading-[1.5] font-bold">Smalling Print</span></div>
+                <ul class="mt-[1.25rem]">
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">T&Cs</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Privacy policy</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Refund policy</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Cookie policy</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Code of conduct</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Accessibility policy</span>
+                    </li>
+                    <li class="cursor-pointer mt-2"><span class="text-[#fff] text-[16px] leading-[1.5] font-normal under">Sitemap</span>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section class="bg-[#3a343a] p-[2.5rem]">
+            <div class="flex justify-between">
+            <div>
+                <ul class="flex">
+                    <li class="p-[0.625rem]"><img src="./facebook.svg" alt="">
+                    </li>
+                    <li class="p-[0.625rem]"><img src="./ig.svg" alt="">
+                    </li>
+                    <li class="p-[0.625rem]"><img src="./tw.svg" alt="">
+                    </li>
+                    <li class="p-[0.625rem]"><img src="./yt.svg" alt="">
+                    </li>
+                    <li class="p-[0.625rem]"><img src="./in.svg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <div><img src="./fut.svg" alt=""></div>
+            </div>
+        </div>
+        </section>
+    </footer>
+    </main>
+   <script>
+let subject = document.getElementById("drop1");
+let courses = document.getElementById("drop2");
+let subjectSvg = document.getElementById("subjectSvg");
+let coursesSvg = document.getElementById("coursesSvg");
+
+const refreshPage = (id) => {
+  if (id == 1) {
+    courses.checked = false
+    subjectSvg.style.transform === "rotate(180deg)" ? subjectSvg.style.transform = "rotate(0)" : subjectSvg.style.transform = "rotate(180deg)"
+    subjectSvg.style.transitionDuration = "500ms";
+    coursesSvg.style.transform = "rotate(0)";
+
+  }
+  if (id == 2) {
+    subject.checked = false
+    coursesSvg.style.transform === "rotate(180deg)" ? coursesSvg.style.transform = "rotate(0)" : coursesSvg.style.transform = "rotate(180deg)"
+    coursesSvg.style.transitionDuration = "500ms";
+    subjectSvg.style.transform = "rotate(0)";
+
+  }
+};
+   </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <script src="https://use.fontawesome.com/7cf53fb640.js"></script>
+    <script src="https://kit.fontawesome.com/9c4027e691.js" crossorigin="anonymous"></script>
+</body>
+</html>
